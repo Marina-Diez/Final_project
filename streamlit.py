@@ -11,8 +11,15 @@ import numpy as np
 import codecs
 import streamlit.components.v1 as components
 
+# We write a tittle and add some photos
+
+logo = Image.open("images/logo.jpg")
+
+col1, col2, col3 = st.beta_columns([1,1,1])
+col2.image(logo, use_column_width=True)
+
 st.write("""
-# Come and visit Portugal 
+# Come visit Portugal 
 """)
 
 col1, col2 = st.beta_columns(2)
@@ -26,6 +33,8 @@ col2.header("Algarve")
 col2.image(algarve, use_column_width=True)
 
 st.title('Select you perfect option')
+
+# We make all selection parametres
 
 destinations_names = ["Lisbon","Algarve"]
 destination = st.radio("Where do you prefer to go?", destinations_names)
@@ -44,7 +53,7 @@ room_names = ["Standard Individual","Standard Double", "Premium", "Suite", "Suit
 room = st.radio("Which type of room do you prefer?", room_names)
 requests = st.number_input("Special requests: how many of the following request would you like? twin bed,Separate beds, Baby crib, Temporary bed, Room breakfast service or/and Extra pillow", format="%.0f")
 
-
+# We put all parametres on a data frame
 data = {"hotel":destination,
                 "lead_time":days_left,
                 "arrival_date_year":year,
@@ -59,7 +68,9 @@ data = {"hotel":destination,
                 "reserved_room_type": room,        
                 "total_of_special_requests": requests
                 }
+                
 df = pd.DataFrame(data, index=[0])
+# We repeat all changes we have done to our dataset to optimize our values and do not have categorical ones.
 le = preprocessing.LabelEncoder()
 df["hotel"] = le.fit_transform(df["hotel"])
 
@@ -79,6 +90,7 @@ dic_room = {"Standard Individual": 2,
                }
 df["reserved_room_type"] = df["reserved_room_type"].map(dic_room)
 
+# We decide to select the model that do not use normalization
 
 load = pickle.load(open("./model/modelo3.pkl", "rb"))
 
