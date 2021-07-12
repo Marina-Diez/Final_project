@@ -15,7 +15,7 @@ In order to reach the conclusions we needed we have done a deep analysis of the 
 >5. **Make it visual**. For me and for our client to be understable
 
 After analyzing how the reserves are higher in the Lisbon area than in the Algarve. We go down to see if the origin of the people who visit each area the most, coincides with those who spend the most on average per night. This information will be useful to launch campaigns limited by origin of tourists.
- In the following photo, we can see that the origin of visitors that spend more money per nigth in Lisbon, do not match which come more times.
+ In the following photo, we can see that the origin of visitors that spend more money per nigth in Lisbon, do not match with those who come more frequently.
 
 ![traveler](images/mapa.JPG)
 
@@ -33,7 +33,7 @@ Finally we decide to get a random forest model, with none normalize data, and wi
 Finally we use streamlit to offer a price predictor which adjusts the amount per night based on a series of variables:
 ![traveler](images/Streamlit.JPG)
 
-**If you want further information of muy project, please visit it!**
+**If you want further information of my project, please visit it!**
 
 ### Aditional information
 I have use severals libraries in order to be able to analyze and make my data visual, suchs as: ["numpy"](https://numpy.org/), ["pandas"](https://pandas.pydata.org/) , ["regex"](https://regexr.com/), ["seaborn"](https://seaborn.pydata.org/index.html), ["matplotlib"](https://matplotlib.org/), ["folium"](https://python-visualization.github.io/folium/quickstart.html/), ["mongo"](https://docs.mongodb.com/php-library/v1.2/), ["pickle"](https://docs.python.org/3/library/pickle.html),  ["scikit-learn"](https://scikit-learn.org/stable/ )
