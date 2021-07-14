@@ -33,6 +33,9 @@ Finally we decide to get a random forest model, with none normalize data, and wi
 Finally we use streamlit to offer a price predictor which adjusts the amount per night based on a series of variables:
 ![traveler](images/Streamlit.JPG)
 
+# FUTURE WORK
+In order to continue developing this work, it would be good to enter a hotel locator or perhaps the time on the selected date.
+
 **If you want further information of my project, please visit it!**
 
 ### Aditional information

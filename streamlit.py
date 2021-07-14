@@ -92,7 +92,7 @@ df["reserved_room_type"] = df["reserved_room_type"].map(dic_room)
 
 # We decide to select the model that do not use normalization
 
-load = pickle.load(open("./model/modelo3.pkl", "rb"))
+load = pickle.load(open("./model_results/modelo3.pkl", "rb"))
 
 if st.button('Get price'): #making and printing our prediction
     result = load.predict(df)
